@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row header text-center h-bg">
+        <h1 class="m-auto">Burger Eatin' Bonanza</h1>
+    </div>
+    <div class=" row text-center h-bg">
+        <img class="img-responsive icon" src="./assets/img/burger.jpg">
+
+    </div>
+
+    <div class="">
+        <div class=" m-auto float-left ">
+            <h1 class="pt-4 pb-4 hb">Ready to grub!</h1>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="burger-nd row">
+                <h2 data-id="{{id}}">{{burger_name}}</h2>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+        <div class=" m-auto float-right ">
+            <h1 class="pt-4 pb-4 hb">Already been grubbed!</h1>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="burger-nd row">
+                <h2>{{burger_name}}</h2>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+</div>

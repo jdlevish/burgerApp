@@ -1,0 +1,19 @@
+.icon{
+    
+    height:35vh;
+    width: 30vw;
+    margin:auto;
+}
+body{
+background-image: url("/assets/img/background.jpg");
+background-size: cover;
+color: red;
+text-shadow: 2px 2px black;
+}
+.h-bg{
+   background-color:#838484;
+    color: red;
+}
+.hb{
+    border-bottom: 2px solid red;
+}
