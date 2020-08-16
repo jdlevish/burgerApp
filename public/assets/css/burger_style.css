@@ -11,9 +11,12 @@ color: red;
 text-shadow: 2px 2px black;
 }
 .h-bg{
-   background-color:#838484;
+   background-color:#FFBC00;
     color: red;
 }
 .hb{
     border-bottom: 2px solid red;
+}
+.input{
+    margin: auto;
 }

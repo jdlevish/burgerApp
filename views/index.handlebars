@@ -3,22 +3,26 @@
         <h1 class="m-auto">Burger Eatin' Bonanza</h1>
     </div>
     <div class=" row text-center h-bg">
-        <img class="img-responsive icon" src="./assets/img/burger.jpg">
+        <img class="img-responsive icon" src="./assets/img/burger.png">
 
+    </div>
+    <div class="pt-5 input">
+        <input type="text" id="name">
+        <button type="submit" id="submit">Order Up a Tasty Burger</button>
     </div>
 
     <div class="">
-        <div class=" m-auto float-left ">
+        <div class=" m-auto float-left  pt-5">
             <h1 class="pt-4 pb-4 hb">Ready to grub!</h1>
             {{#each burgers}}
             {{#unless devoured}}
             <div class="burger-nd row">
-                <h2 data-id="{{id}}">{{burger_name}}</h2>
+                <h2 class="burg" data-id="{{id}}">{{burger_name}}</h2>
             </div>
             {{/unless}}
             {{/each}}
         </div>
-        <div class=" m-auto float-right ">
+        <div class=" m-auto float-right pt-5">
             <h1 class="pt-4 pb-4 hb">Already been grubbed!</h1>
             {{#each burgers}}
             {{#if devoured}}
@@ -28,6 +32,8 @@
             {{/if}}
             {{/each}}
         </div>
+
     </div>
+    <script src="./assets/js/burgers.js"></script>
 
 </div>

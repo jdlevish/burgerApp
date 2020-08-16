@@ -7,16 +7,16 @@ var burger = {
         });
     },
 
-    create: function (cols, vals, cb) {
-        orm.insertOne("burgers", cols, vals, function (res) {
+    create: function (vals, cb) {
+        orm.insertOne("burgers", vals, function (res) {
             cb(res);
         });
     },
 
-    update: function (objColVals, condition, cb) {
-        orm.updateOne("cats", objColVals, condition, function (res) {
-            cb(res);
-        })
+    update: function (burgerStatus, burgerId, cb) {
+        orm.updateOne(burgerStatus, burgerId, function (response) {
+            cb(response);
+        });
     }
 
 };

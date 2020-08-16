@@ -13,7 +13,7 @@ var orm = {
     },
 
     insertOne: function (tableName, value, cb) {
-        var queryString = "INSERT INTO ?? Values(?)";
+        var queryString = "INSERT INTO ?? (burger_name, devoured) Values(?)";
         connection.query(queryString, [tableName, value], function (err, result) {
             if (err) throw err;
             cb(result)
@@ -21,13 +21,20 @@ var orm = {
 
     },
 
-    updateOne: function (tableName, whatToUpdate, valuesToUpdate, condition, conditionValue, cb) {
-        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
-        connection.query(queryString, [tableName, whatToUpdate, valuesToUpdate, condition, conditionValue], function (err, result) {
-            if (err) throw err;
-            cb(result);
-        })
-    }
+    updateOne: function (burgerStatus, burgerId, callback) {
+        var queryString = "UPDATE burgers SET devoured = " + burgerStatus + " WHERE id = " + burgerId;
 
+        connection.query(queryString, function (error, result) {
+            if (error) {
+                console.log("MYSQL UPDATE QUERY ERROR: " + error);
+            } else if (result.affectedRows === 0) {
+                console.log("MYSQL UPDATE QUERY ERROR: " + error);
+            } else {
+                console.log("Status of burger has been updated!");
+            }
+
+            callback(result);
+        });
+    }
 }
 module.exports = orm
