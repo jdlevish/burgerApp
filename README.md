@@ -19,10 +19,8 @@
 *[Contributing](#Contributing)
 ## Description
 this app allows a user to order a burger then grub ordered burger
-    
-## Installation
-    
-this application runs completely in the browser
+## Link to deployed application
+https://vast-basin-42357.herokuapp.com/
     
 ## Requirements
     
